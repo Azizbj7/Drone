@@ -1,0 +1,27 @@
+<launch>
+  <arg
+    name="urdf_path" />
+  <param
+    name="robot_description"
+    textfile="$(find Drone_assembly)/urdf/Drone_assembly.urdf" />
+  <arg name="rviz_config_path"
+   value="$(find-pkg-share Drone_assembly)/rviz/urdf_config.rviz"/>
+
+  <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find Drone_assembly)/urdf.rviz" />
+    <node
+    name="v4l2_camera_node"
+    pkg="4l2_camera"
+    type="camera" />
+</launch>

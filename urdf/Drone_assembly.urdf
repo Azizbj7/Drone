@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Drone_assembly">
+  <link name="world"/>
+   <joint name="base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.17"/>
+   </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000526446307001996 0.0595794802877439 0.20374175462204"
+        rpy="0 0 0" />
+      <mass
+        value="0.135637920617234" />
+      <inertia
+        ixx="0.000111917690907923"
+        ixy="-4.9316217161169E-08"
+        ixz="-1.26843726820984E-07"
+        iyy="0.000156239151062943"
+        iyz="6.04737129873825E-07"
+        izz="5.97774331211897E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/base_link.STL"/>
+      </geometry>
+      <material
+        name="Red">
+        <color 
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_link">
+   <material>Gazebo/Red</material>
+   <turnGravityOff>false</turnGravityOff>
+   <selfCollide>true</selfCollide>
+  </gazebo>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="2.7306E-06 0.015323 -1.6759E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0031862" />
+      <inertia
+        ixx="8.9375E-08"
+        ixy="2.0048E-12"
+        ixz="1.4027E-08"
+        iyy="2.9215E-06"
+        iyz="-1.9575E-11"
+        izz="2.938E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="Blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="Link_1">
+   <material>Gazebo/Blue</material>
+  </gazebo>
+  <joint
+    name="Prop_1"
+    type="revolute">
+    <origin
+      xyz="-0.091541 -0.29521 0.073447"
+      rpy="1.5708 0 -2.4061" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="2.7306E-06 0.015323 -1.6759E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0031862" />
+      <inertia
+        ixx="8.9375E-08"
+        ixy="2.0048E-12"
+        ixz="1.4027E-08"
+        iyy="2.9215E-06"
+        iyz="-1.9575E-11"
+        izz="2.938E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="Blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="Link_2">
+   <material>Gazebo/Blue</material>
+  </gazebo>
+  <joint
+    name="Prop_2"
+    type="revolute">
+    <origin
+      xyz="-0.096491 -0.11145 0.073447"
+      rpy="1.5708 0 -2.4374" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="2.7306E-06 0.015323 -1.6759E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0031862" />
+      <inertia
+        ixx="8.9375E-08"
+        ixy="2.0048E-12"
+        ixz="1.4027E-08"
+        iyy="2.9215E-06"
+        iyz="-1.9575E-11"
+        izz="2.938E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="Blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="Link_3">
+   <material>Gazebo/Blue</material>
+  </gazebo>
+  <joint
+    name="Prop_3"
+    type="revolute">
+    <origin
+      xyz="0.087665 -0.29979 0.073447"
+      rpy="1.5708 0 1.112" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_4">
+    <inertial>
+      <origin
+        xyz="2.7306E-06 0.015323 -1.6759E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0031862" />
+      <inertia
+        ixx="8.9375E-08"
+        ixy="2.0048E-12"
+        ixz="1.4027E-08"
+        iyy="2.9215E-06"
+        iyz="-1.9575E-11"
+        izz="2.938E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_4.STL" />
+      </geometry>
+      <material
+        name="Blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="Link_4">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <joint
+    name="Prop_4"
+    type="revolute">
+    <origin
+      xyz="0.096431 -0.11132 0.073447"
+      rpy="1.5708 0 0.70181" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_5">
+    <inertial>
+      <origin
+        xyz="-0.00052645 0.059579 0.20374"
+        rpy="0 0 0" />
+      <mass
+        value="0.13564" />
+      <inertia
+        ixx="0.00011192"
+        ixy="-4.9316E-08"
+        ixz="-1.2684E-07"
+        iyy="0.00015624"
+        iyz="6.0474E-07"
+        izz="5.9777E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_5.STL" />
+      </geometry>
+      <material
+        name="Blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="Link_5">
+   <material>Gazebo/Blue</material>
+  </gazebo>
+  <joint
+    name="Prop_5"
+    type="revolute">
+    <origin
+      xyz="0 -0.28476 0.062447"
+      rpy="-1.5708 -1.176 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_5" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+ <gazebo reference="Link_5">
+  <sensor name="camera" type="camera">
+    <pose>0 0 0.1 0 0 0</pose>
+    <visualize>true</visualize>
+    <update_rate>5</update_rate>
+
+    <camera>
+      <horizontal_fov>1</horizontal_fov>
+      <image>
+        <format>R8G8B8</format>
+        <width>640</width>
+        <height>480</height>
+      </image>
+      <clip>
+        <near>0.05</near>
+        <far>1</far>
+      </clip>
+    </camera>
+    <plugin name="camera_plugin" filename="libgazebo_ros_camera.so">
+      <ros>
+        <namespace>/camera</namespace>
+      </ros>
+      <frame_name>Link_5</frame_name>
+    </plugin>
+  </sensor>
+</gazebo>
+  <transmission name="link_1_trans">
+   <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_1">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_1_motor">
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+ </transmission>
+   <transmission name="link_2_trans">
+   <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_2">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_2_motor">
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+ </transmission>
+   <transmission name="link_3_trans">
+   <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_3">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_3_motor">
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+ </transmission>
+   <transmission name="link_4_trans">
+   <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_4">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_4_motor">
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+ </transmission>
+ <gazebo>
+  <plugin name="gazebo_ros_control"
+   filename="libgazebo_ros_control.so">
+   <robotNamespace>/drone</robotNamespace>
+  </plugin>
+ </gazebo>
+  <gazebo reference="link_1">
+  <selfCollide>true</selfCollide>
+ </gazebo>
+  <gazebo reference="link_2">
+  <selfCollide>true</selfCollide>
+ </gazebo>
+ <gazebo reference="link_3">
+  <selfCollide>true</selfCollide>
+ </gazebo>
+ <gazebo reference="link_4">
+  <selfCollide>true</selfCollide>
+ </gazebo>
+</robot>
