@@ -19,8 +19,6 @@ This repository integrates PX4’s x500 model (with a stereo rig and downward-fa
 9. [Customization](#customization)  
 10. [Troubleshooting & Tips](#troubleshooting--tips)  
 11. [Contributing](#contributing)  
-12. [License](#license)  
-
 ---
 
 ## Project Overview
@@ -482,11 +480,5 @@ Contributions are welcome! If you:
 - Write unit tests for line-fitting logic
 
 … please open an issue or a pull request. Small improvements—especially to documentation or reliability—help everyone.
-
----
-
-## License
-
-This project is released under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ---
